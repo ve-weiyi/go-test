@@ -35,7 +35,7 @@ func OkWithMessage(c *gin.Context, message string) {
 }
 
 func OkWithData(c *gin.Context, data interface{}) {
-	Result(c, SUCCESS, data, "查询成功")
+	Result(c, SUCCESS, data, "登录成功")
 }
 
 func OkWithDetailed(c *gin.Context, data interface{}, message string) {

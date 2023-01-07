@@ -1,6 +1,6 @@
 package request
 
 type UserLoginReq struct {
-	Username string `json:"username"` // 用户名
-	Password string `json:"password"`
+	Uloginid  string `form:"uloginid"`  // 用户名
+	Upassword string `form:"upassword"` //密码
 }
