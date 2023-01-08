@@ -8,22 +8,19 @@ import (
 	"log"
 )
 
-type Login struct {
+type UserInfo struct {
 }
 
-func (l *Login) Login(c *gin.Context) {
-
+func (u UserInfo) Userinfo(c *gin.Context) {
 	log.Printf("Login--->")
 
-	name := c.Query("name")
-	pwd := c.Query("pwd")
+	email := c.Query("email")
 
-	var req request.UserLoginReq
+	var req request.Userinfo
 
-	req.Username = name
-	req.Password = pwd
+	req.Email = email
 
-	login, err := service.ServiceStruct.LoginService.Login(&req)
+	login, err := service.ServiceStruct.UserInfoService.GetUserInfo(&req)
 
 	if err != nil {
 		response.FailWithMessage(c, err.Error())

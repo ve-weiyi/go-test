@@ -11,7 +11,6 @@ func RouterInit() *gin.Engine {
 	r := gin.Default()
 
 	group := r.Group("api/")
-
 	// 2.绑定路由规则，执行的函数
 	// gin.Context，封装了request和response
 	group.GET("/", func(c *gin.Context) {
@@ -19,5 +18,7 @@ func RouterInit() *gin.Engine {
 	})
 
 	group.GET("/login", api.API.LoginAPi.Login)
+
+	group.POST("/userinfo", api.API.UserInfoApi.Userinfo)
 	return r
 }

@@ -9,7 +9,7 @@ import (
 	"log"
 )
 
-const dns = "root:mysql7914@(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
+const dns = "root:123456@(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
 
 func MysqlConnect() {
 	var err error

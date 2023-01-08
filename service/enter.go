@@ -1,7 +1,8 @@
 package service
 
 type serviceGroup struct {
-	LoginService LoginService
+	LoginService    LoginService
+	UserInfoService UserInfoService
 }
 
 var ServiceStruct = new(serviceGroup)
